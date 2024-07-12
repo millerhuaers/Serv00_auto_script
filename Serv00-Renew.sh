@@ -44,7 +44,7 @@ install_required_modules() {
     for module in $modules; do
         if ! python3 -c "import $module" 2>/dev/null; then
             echo "正在安装模块: $module"
-            pip3 install "$module"
+            pip install "$module"
         fi
     done
 }
